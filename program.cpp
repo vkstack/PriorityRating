@@ -21,6 +21,7 @@ public:
       int pos = size++;
       while(pos && abs(x) > abs( heapArr[(pos-1)/2]) ) {
         heapArr[pos] = heapArr[(pos-1)/2];
+        heapArr[(pos-1)/2]=x;
         pos = (pos-1)/2;
       }
       heapArr[pos] = x;
